@@ -15,17 +15,14 @@
             </div>
             <div class="glide__slide">
                 <div class="nav"><img src="/images/sliderNav.svg" alt=""></div>
-                    <p>Quaerens opportunitatem et momenti copiam ex distantibus locis arcessitam, iter fluctibus
-                        impeditum est, quibus incessanter pluviae adiciebantur.</p>
-                    <h3>River Bend</h3>
-                
+                <p>Quaerens opportunitatem et momenti copiam ex distantibus locis arcessitam, iter fluctibus
+                    impeditum est, quibus incessanter pluviae adiciebantur.</p>
+                <h3>River Bend</h3>
             </div>
             <div class="glide__slide">
                 <div class="nav"><img src="/images/sliderNav.svg" alt=""></div>
                 <p>In valle remota morabatur, sperans serenum ad translationem commeatus; at tempora turbata et undae rapidae eius propositum inhibuerunt.</p>
                 <h3>Meadow View</h3>
-                
-                
             </div>
         </div>
     </div>
@@ -43,10 +40,7 @@
     </div>
 </div>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.0/dist/glide.min.js"></script>
-
 <script>
     const glide = new Glide('#glide', {
         type: 'carousel',
@@ -57,6 +51,8 @@
         keyboard: true,
         focusAt: 'center',
         loop: true,
+        swipeThreshold: 80, // Порог свайпа
+        dragThreshold: 120 // Порог перетаскивания для ПК
     });
 
     glide.mount(); // Монтируем слайдер

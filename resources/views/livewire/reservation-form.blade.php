@@ -46,6 +46,7 @@
     <!-- Форма -->
     <form id="reservationForm" action="{{ route('reservations.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="text-form">
         <div class="top-form">
             <div>
                 <input placeholder="Full Name*" type="text" name="name" id="name" value="{{ old('name') }}"
@@ -99,6 +100,7 @@
                 @enderror
             </div>
         </div>
+    </div>
         <div>
             <textarea placeholder="Message" name="message" id="message" value="{{ old('message') }}"
                 @error('message') autofocus @enderror></textarea>

@@ -71,7 +71,7 @@
                 <h1>Check Our Blogs</h1>
             </div>
             <livewire:news-slider />
-            <div class="link"><a href="">More News</a></div>
+            <div class="link"><a href="{{ route('ourNews') }}">More News</a></div>
         </div>
         <div class="reservation">
             <livewire:reservation-form />
