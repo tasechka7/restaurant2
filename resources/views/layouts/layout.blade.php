@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.scss')
     @vite('resources/js/app.js')
+    <link rel="icon" href="/images/logo.png">
     @livewireStyles
-    <title>@yield('title') Restaurant</title>
+    <title>@yield('title') </title>
 
 </head>
 

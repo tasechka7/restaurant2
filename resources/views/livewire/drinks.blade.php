@@ -7,18 +7,22 @@
             </button>
         @endforeach
     </div>
-
+    <div class="name-category">
+        <h1>{{ $categories->firstWhere('id', $selectedCategory)->name }}</h1>
+    </div>
 
     <div class="cards-container">
         @forelse ($drinks as $drink)
             <div class="card">
                 <img src="{{ asset('storage/' . $drink->photo) }}" alt="{{ $drink->name }}">
                 <div class="description">
+                    <div class="text">
                     <h1>{{ $drink->name }}</h1>
-                    <p><span>Category: </span> {{ $drink->category->name }}</p>
+                    <p id="category"><span>Category: </span> {{ $drink->category->name }}</p>
                     <p><span>Ingredients: </span> {{ $drink->ingredients }}</p>
+                </div>
                     <div class="price">
-                        <p><span>Price: </span> {{ $drink->price }} <span>MDL</span></p>
+                        <p><span>Price: </span> {{ $drink->price }} MDL</p>
                     </div>
                 </div>
                 <div class="buttons">

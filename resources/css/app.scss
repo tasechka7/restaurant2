@@ -8,9 +8,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23FFFFFF" stroke-width="1.25" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>')
-            12 12,
-        auto;
+}
+
+a,
+button {
+    cursor: pointer;
 }
 
 @import url("../../public/fonts/Gilroy/stylesheet.css");
@@ -75,8 +77,9 @@ header {
             left: 0;
             background-color: rgba(35, 43, 53, 1);
             display: flex;
-            width: 30%;
+            width:40%;
             height: 100vh;
+
             transition: transform 0.5s ease-out;
 
             .left-side {
@@ -114,7 +117,7 @@ header {
             }
 
             .right-side {
-                padding: 7% 4% 7% 10%;
+                padding: 7% 10% 7% 10%;
                 width: 70%;
                 .logo {
                     display: flex;
@@ -199,6 +202,7 @@ header {
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
+        color: rgba(193, 153, 118, 1);
     }
     h1 {
         font-family: Abril Fatface;
@@ -596,105 +600,6 @@ header {
             }
         }
     }
-    .reservation {
-        width: 100%;
-        padding: 5% 0;
-        display: flex;
-        justify-content: center;
-
-        .form-reservation {
-            padding: 50px 70px;
-            width: 1100px;
-            background-color: rgba(22, 27, 33, 1);
-            h1 {
-                font-family: Abril Fatface;
-                font-size: 30px;
-                font-weight: 400;
-                line-height: 40.47px;
-                letter-spacing: 0.6000000238418579px;
-                text-align: center;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-                span {
-                    color: rgba(193, 153, 118, 1);
-                }
-            }
-            form {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                .top-form,
-                .bottom-form {
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        span {
-                            color: red;
-                            font-size: 10px;
-                            font-weight: 100;
-                            margin-top: 5px;
-                        }
-                    }
-                }
-                input,
-                textarea,
-                select {
-                    width: 270px;
-                    color: rgba(255, 255, 255);
-                    background: none;
-                    border: none;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-                    font-family: Gilroy-Medium;
-                    font-size: 16px;
-                    line-height: 14.06px;
-                    letter-spacing: 0.6000000238418579px;
-                    text-align: left;
-                    text-underline-position: from-font;
-                    text-decoration-skip-ink: none;
-                    outline: none;
-                    margin-top: 35px;
-                }
-                input::placeholder,
-                select::placeholder,
-                textarea::placeholder {
-                    color: rgba(255, 255, 255, 0.5);
-                }
-                select option {
-                    background-color: #374151;
-                    color: rgba(255, 255, 255, 0.5);
-                }
-                input:focus,
-                select:focus,
-                textarea:focus {
-                    border-bottom: 1px solid rgba(193, 153, 118, 1);
-                    box-shadow: none;
-                }
-                textarea {
-                    width: 750px;
-                    resize: none;
-                    height: 50px;
-                }
-                button {
-                    margin-top: 3%;
-                    font-family: Gilroy-SemiBold;
-                    font-size: 14px;
-                    line-height: 16.41px;
-                    letter-spacing: 0.4000000059604645px;
-                    text-align: left;
-                    text-underline-position: from-font;
-                    text-decoration-skip-ink: none;
-                    background: rgba(193, 153, 118, 1);
-                    padding: 2% 3%;
-                    border-radius: 29px;
-                }
-            }
-        }
-    }
 }
 
 .aboutMain {
@@ -862,7 +767,7 @@ header {
                             margin-top: 35px;
                             margin-bottom: 21px;
                         }
-                        h3{
+                        h3 {
                             font-family: Brush Signature;
                             font-size: 30px;
                             font-weight: 400;
@@ -872,7 +777,6 @@ header {
                             text-underline-position: from-font;
                             text-decoration-skip-ink: none;
                             color: rgba(193, 153, 118, 1);
-                             
                         }
                     }
                 }
@@ -929,106 +833,610 @@ header {
             }
         }
     }
-    .reservation {
-        width: 100%;
-        padding: 5% 0;
-        display: flex;
-        justify-content: center;
+}
 
-        .form-reservation {
-            padding: 50px 70px;
-            width: 1100px;
-            background-color: rgba(22, 27, 33, 1);
-            h1 {
-                font-family: Abril Fatface;
-                font-size: 30px;
-                font-weight: 400;
-                line-height: 40.47px;
-                letter-spacing: 0.6000000238418579px;
-                text-align: center;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-                span {
-                    color: rgba(193, 153, 118, 1);
+.banner-food {
+    left: 0;
+    min-width: 100vw;
+    background-image: url(../../public/images/backFood.svg);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    z-index: -4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-family: Abril Fatface;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 134.9px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    p {
+        font-family: Balestya Bold;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 32.03px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(193, 153, 118, 1);
+    }
+}
+.mainMenu {
+    position: relative;
+    top: 90vh;
+    z-index: -1;
+    .menu {
+        padding: 3% 108px;
+        .cards {
+            .category-buttons {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                button {
+                    font-family: Gilroy-Medium;
+                    font-size: 22px;
+                    font-weight: 400;
+                    line-height: 21.58px;
+                    letter-spacing: 0.800000011920929px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    border: 1px solid rgba(193, 153, 118, 1);
+                    padding: 20px 30px;
+                }
+                button.btn-primary {
+                    background-color: rgba(193, 153, 118, 1);
+                    font-weight: 700;
                 }
             }
-            form {
+
+            .name-category {
+                margin: 3% 0;
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;
-                .top-form,
-                .bottom-form {
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                    div {
-                        display: flex;
-                        flex-direction: column;
-                        span {
-                            color: red;
-                            font-size: 10px;
-                            font-weight: 100;
-                            margin-top: 5px;
-                        }
-                    }
-                }
-                input,
-                textarea,
-                select {
-                    width: 270px;
-                    color: rgba(255, 255, 255);
-                    background: none;
-                    border: none;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-                    font-family: Gilroy-Medium;
-                    font-size: 16px;
-                    line-height: 14.06px;
+                h1 {
+                    font-family: Abril Fatface;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 48.56px;
                     letter-spacing: 0.6000000238418579px;
                     text-align: left;
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
-                    outline: none;
-                    margin-top: 35px;
                 }
-                input::placeholder,
-                select::placeholder,
-                textarea::placeholder {
-                    color: rgba(255, 255, 255, 0.5);
-                }
-                select option {
-                    background-color: #374151;
-                    color: rgba(255, 255, 255, 0.5);
-                }
-                input:focus,
-                select:focus,
-                textarea:focus {
-                    border-bottom: 1px solid rgba(193, 153, 118, 1);
-                    box-shadow: none;
-                }
-                textarea {
-                    width: 750px;
-                    resize: none;
-                    height: 50px;
-                }
-                button {
-                    margin-top: 3%;
-                    font-family: Gilroy-SemiBold;
-                    font-size: 14px;
-                    line-height: 16.41px;
-                    letter-spacing: 0.4000000059604645px;
-                    text-align: left;
-                    text-underline-position: from-font;
-                    text-decoration-skip-ink: none;
-                    background: rgba(193, 153, 118, 1);
-                    padding: 2% 3%;
-                    border-radius: 29px;
+            }
+
+            .cards-container {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                .card {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                    .description {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 78%;
+                        #category {
+                            display: none;
+                        }
+                        p {
+                            span {
+                                display: none;
+                            }
+                        }
+                        .text {
+                            width: 60%;
+                            h1 {
+                                font-family: Abril Fatface;
+                                font-size: 22px;
+                                font-weight: 400;
+                                line-height: 21.58px;
+                                letter-spacing: 0.800000011920929px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                color: rgba(193, 153, 118, 1);
+                                margin-bottom: 20px;
+                            }
+                            p {
+                                font-family: Gilroy-Medium;
+                                font-size: 18px;
+                                line-height: 16.41px;
+                                letter-spacing: 0.800000011920929px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                opacity: 50%;
+                            }
+                        }
+                        .price {
+                            width: 35%;
+                            display: flex;
+                            justify-content: space-between;
+                            p {
+                                font-family: Abril Fatface;
+                                font-size: 24px;
+                                font-weight: 400;
+                                line-height: 21.58px;
+                                letter-spacing: 0.800000011920929px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                            }
+                            #weight {
+                                opacity: 70%;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .buttons {
+                        display: none;
+                    }
                 }
             }
         }
     }
 }
+
+.banner-drink {
+    left: 0;
+    min-width: 100vw;
+    background-image: url(../../public/images/backDrink.svg);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    z-index: -4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-family: Abril Fatface;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 134.9px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    p {
+        font-family: Balestya Bold;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 32.03px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(193, 153, 118, 1);
+    }
+}
+
+.mainDrink {
+    position: relative;
+    top: 90vh;
+    height: auto;
+    z-index: -1;
+    .menu {
+        padding: 3% 108px;
+        .cards {
+            .category-buttons {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                button {
+                    font-family: Gilroy-Medium;
+                    font-size: 22px;
+                    font-weight: 400;
+                    line-height: 21.58px;
+                    letter-spacing: 0.800000011920929px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    border: 1px solid rgba(193, 153, 118, 1);
+                    padding: 20px 30px;
+                }
+                button.btn-primary {
+                    background-color: rgba(193, 153, 118, 1);
+                    font-weight: 700;
+                }
+            }
+
+            .name-category {
+                margin: 3% 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h1 {
+                    font-family: Abril Fatface;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 48.56px;
+                    letter-spacing: 0.6000000238418579px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                }
+            }
+
+            .cards-container {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                .card {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                    .description {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 78%;
+                        #category {
+                            display: none;
+                        }
+                        p {
+                            span {
+                                display: none;
+                            }
+                        }
+                        .text {
+                            width: 75%;
+                            h1 {
+                                font-family: Abril Fatface;
+                                font-size: 22px;
+                                font-weight: 400;
+                                line-height: 21.58px;
+                                letter-spacing: 0.800000011920929px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                color: rgba(193, 153, 118, 1);
+                                margin-bottom: 20px;
+                            }
+                            p {
+                                font-family: Gilroy-Medium;
+                                font-size: 18px;
+                                line-height: 16.41px;
+                                letter-spacing: 0.800000011920929px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                opacity: 50%;
+                            }
+                        }
+                        .price {
+                            width: 20%;
+                            display: flex;
+                            justify-content: end;
+                            p {
+                                font-family: Abril Fatface;
+                                font-size: 24px;
+                                font-weight: 400;
+                                line-height: 21.58px;
+                                letter-spacing: 0.800000011920929px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                            }
+                            #weight {
+                                opacity: 70%;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .buttons {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner-news {
+    left: 0;
+    min-width: 100vw;
+    background-image: url(../../public/images/newsBack.svg);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    z-index: -4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-family: Abril Fatface;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 134.9px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    p {
+        font-family: Balestya Bold;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 32.03px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(193, 153, 118, 1);
+    }
+    h3 {
+        font-family: Gilroy-SemiBold;
+        font-size: 22px;
+        line-height: 25.78px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+}
+
+.mainNews {
+    position: relative;
+    top: 90vh;
+    z-index: -1;
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 3% 108px;
+        .card {
+            width: 30%;
+            height: 500px;
+            box-shadow: 0 0 10px rgba(193, 153, 118, 1);
+            .buttons {
+                display: none;
+            }
+            img {
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+            .description {
+                padding: 20px 30px;
+                h1 {
+                    font-family: Gilroy-SemiBold;
+                    font-size: 22px;
+                    line-height: 21.09px;
+                    letter-spacing: 0.6000000238418579px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    text-align: center;
+                }
+                p {
+                    font-family: Gilroy-SemiBold;
+                    font-size: 16px;
+                    line-height: 11.72px;
+                    letter-spacing: 0.6000000238418579px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    color: rgba(193, 153, 118, 1);
+                    margin: 15px 0;
+                }
+                .text{
+                    font-family: Gilroy-Medium;
+                    font-size: 18px;
+                    line-height: 21px;
+                    letter-spacing: 0.6000000238418579px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                     opacity: 50%;
+                     color: white;
+                }
+            }
+        }
+    }
+}
+
+.reservation {
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+
+    .form-reservation {
+        padding: 50px 70px;
+        width: 1100px;
+        background-color: rgba(22, 27, 33, 1);
+        h1 {
+            font-family: Abril Fatface;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 40.47px;
+            letter-spacing: 0.6000000238418579px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            span {
+                color: rgba(193, 153, 118, 1);
+            }
+        }
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .top-form,
+            .bottom-form {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    span {
+                        color: red;
+                        font-size: 10px;
+                        font-weight: 100;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            input,
+            textarea,
+            select {
+                width: 270px;
+                color: rgba(255, 255, 255);
+                background: none;
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                font-family: Gilroy-Medium;
+                font-size: 16px;
+                line-height: 14.06px;
+                letter-spacing: 0.6000000238418579px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                outline: none;
+                margin-top: 35px;
+            }
+            input::placeholder,
+            select::placeholder,
+            textarea::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+            select option {
+                background-color: #374151;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            input:focus,
+            select:focus,
+            textarea:focus {
+                border-bottom: 1px solid rgba(193, 153, 118, 1);
+                box-shadow: none;
+            }
+            textarea {
+                width: 750px;
+                resize: none;
+                height: 50px;
+            }
+            button {
+                margin-top: 3%;
+                font-family: Gilroy-SemiBold;
+                font-size: 14px;
+                line-height: 16.41px;
+                letter-spacing: 0.4000000059604645px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                background: rgba(193, 153, 118, 1);
+                padding: 2% 3%;
+                border-radius: 29px;
+            }
+        }
+    }
+}
+
+.banner-reservation{
+    left: 0;
+    min-width: 100vw;
+    background-image: url(../../public/images/reservationBack.svg);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    z-index: -4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-family: Abril Fatface;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 134.9px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+    p {
+        font-family: Balestya Bold;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 32.03px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(193, 153, 118, 1);
+    }
+    h3 {
+        font-family: Gilroy-SemiBold;
+        font-size: 22px;
+        line-height: 25.78px;
+        letter-spacing: 0.6000000238418579px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+}
+
+.mainReservation{
+    position: relative;
+    top:90vh;
+    z-index: -1;
+}
+
+
 
 footer {
     width: 100%;
@@ -1113,8 +1521,3 @@ footer {
         }
     }
 }
-
-
-
-
-

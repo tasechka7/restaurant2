@@ -28,18 +28,18 @@
                 <nav>
                     <a href="{{ route('home') }}" :class="{ 'active': activeLink === '{{ route('home') }}' }" @click="activeLink = '{{ route('home') }}'">HOME</a>
                     <a href="{{ route('about') }}" :class="{ 'active': activeLink === '/about' }" @click="activeLink = '/about'">ABOUT US</a>
-                    <a href="" :class="{ 'active': activeLink === '/menu' }" @click="activeLink = '/menu'">MENU</a>
-                    <a href="" :class="{ 'active': activeLink === '/drinks' }" @click="activeLink = '/drinks'">DRINKS</a>
-                    <a href="" :class="{ 'active': activeLink === '/news' }" @click="activeLink = '/news'">NEWS</a>
-                    <a href="" :class="{ 'active': activeLink === '/contact' }" @click="activeLink = '/contact'">CONTACT US</a>
+                    <a href="{{ route('menu') }}" :class="{ 'active': activeLink === '/menu' }" @click="activeLink = '/menu'">MENU</a>
+                    <a href="{{ route('drink') }}" :class="{ 'active': activeLink === '/drinks' }" @click="activeLink = '/drinks'">DRINKS</a>
+                    <a href="{{ route('ourNews') }}" :class="{ 'active': activeLink === '/news' }" @click="activeLink = '/news'">NEWS</a>
+                    
                 </nav>
             </div>
         </div>
     </div>
     <div class="logo">
-    <img src="/images/bigLogo.png" alt="">
+    <a href="{{ route('home') }}"><img src="/images/bigLogo.png" alt=""></a>
     </div>
     <div class="links">
-        <a href="">Reservations</a>
+        <a href="{{ route('reservation') }}">Reservations</a>
     </div>
 </header>

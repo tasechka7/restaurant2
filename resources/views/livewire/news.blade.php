@@ -1,4 +1,3 @@
-
 <div class="cards">
     <div class="cards-container">
         @forelse ($news as $new)
@@ -6,8 +5,8 @@
                 <img src="{{ asset('storage/' . $new->photo) }}" alt="{{ $new->name }}">
                 <div class="description">
                     <h1>{{ $new->name }}</h1>
-                    <p>{{ $new->date }}</p>
-                    <p>{{ $new->description }}</p>
+                    <p>{{ \Carbon\Carbon::parse($new->date)->format('d M Y') }}</p>
+                    <p class="text">{{ $new->description }}</p>
                 </div>
                 <div class="buttons">
                     <a href="{{ route('news.edit', $new->id) }}">Edit</a>

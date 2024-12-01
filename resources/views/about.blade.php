@@ -26,9 +26,6 @@
                 <h4>Jhon Smith</h4>
             </div>
         </div>
-        <div class="gallery">
-            <livewire:slider-photo />
-        </div>
         <div class="descriptionTwo">
             <div class="logo">
                 VICTORIA’S

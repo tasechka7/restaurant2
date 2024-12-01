@@ -8,9 +8,9 @@
     @vite('resources/css/app.scss')
     @vite('resources/js/app.js')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.5.0/dist/css/glide.core.min.css">
-
+<link rel="icon" href="/images/logo.png">
     @livewireStyles
-    <title>@yield('title') Restaurant</title>
+    <title>@yield('title')</title>
 
 </head>
 

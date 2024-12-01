@@ -13,6 +13,10 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Route::view('/', 'index')->name('home');
 Route::view('/about', 'about')->name('about');
+Route::view('/menu', 'menu')->name('menu');
+Route::view('/drink', 'drink')->name('drink');
+Route::view('/ourNews', 'ourNews')->name('ourNews');
+Route::view('/reservation', 'reservation')->name('reservation');
 
 
 
