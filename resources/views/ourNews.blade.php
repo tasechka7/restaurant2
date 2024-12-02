@@ -4,9 +4,9 @@
 
 @section('main')
     <div class="banner-news">
-        <p>Our News</p>
+        <h2>Our News</h2>
         <h1>Victoria’s Darlinghurst</h1>
-        <h3>COCKTAILS . LIVE MUSIC . RESTAURANT . EVENTS</h3>
+        <p>COCKTAILS . LIVE MUSIC . RESTAURANT . EVENTS</p>
     </div>
     <div class="mainNews">
         <div class="news">

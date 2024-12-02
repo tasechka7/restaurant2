@@ -545,90 +545,89 @@ header {
                 text-decoration-skip-ink: none;
             }
         }
-        .news-slider{
+        .news-slider {
             display: flex;
             flex-direction: column;
             gap: 30px;
             width: 100%;
-        .slider-container {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            gap: 2%;
-
-            .cards-container {
+            .slider-container {
                 display: flex;
-                width: 95%;
                 justify-content: space-between;
-                .card {
-                    width: 32%;
-                    background: rgba(22, 27, 33, 1);
+                width: 100%;
+                gap: 2%;
+
+                .cards-container {
+                    display: flex;
+                    width: 95%;
+                    justify-content: space-between;
+                    .card {
+                        width: 32%;
+                        background: rgba(22, 27, 33, 1);
+                        img {
+                            width: 100%;
+                            height: 250px;
+                            object-fit: cover;
+                        }
+
+                        .description {
+                            padding: 3% 7% 10% 3%;
+                            h1 {
+                                font-family: Gilroy-SemiBold;
+                                font-size: 18px;
+                                line-height: 21.09px;
+                                letter-spacing: 0.6000000238418579px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                            }
+                            h3 {
+                                margin: 3% 0;
+                                font-family: Gilroy-SemiBold;
+                                font-size: 10px;
+                                line-height: 11.72px;
+                                letter-spacing: 0.6000000238418579px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                color: rgba(193, 153, 118, 1);
+                            }
+                            p {
+                                font-family: Gilroy-Medium;
+                                font-size: 14px;
+                                line-height: 21px;
+                                letter-spacing: 0.6000000238418579px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                            }
+                        }
+                    }
+                }
+
+                button {
                     img {
-                        width: 100%;
-                        height: 250px;
-                        object-fit: cover;
-                    }
-
-                    .description {
-                        padding: 3% 7% 10% 3%;
-                        h1 {
-                            font-family: Gilroy-SemiBold;
-                            font-size: 18px;
-                            line-height: 21.09px;
-                            letter-spacing: 0.6000000238418579px;
-                            text-align: left;
-                            text-underline-position: from-font;
-                            text-decoration-skip-ink: none;
-                        }
-                        h3 {
-                            margin: 3% 0;
-                            font-family: Gilroy-SemiBold;
-                            font-size: 10px;
-                            line-height: 11.72px;
-                            letter-spacing: 0.6000000238418579px;
-                            text-align: left;
-                            text-underline-position: from-font;
-                            text-decoration-skip-ink: none;
-                            color: rgba(193, 153, 118, 1);
-                        }
-                        p {
-                            font-family: Gilroy-Medium;
-                            font-size: 14px;
-                            line-height: 21px;
-                            letter-spacing: 0.6000000238418579px;
-                            text-align: left;
-                            text-underline-position: from-font;
-                            text-decoration-skip-ink: none;
-                        }
+                        width: 50px;
                     }
                 }
             }
-
-            button {
-                img {
-                    width: 50px;
+            .dots-navigation {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 8px;
+                .dot {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: rgba(193, 153, 118, 0.3);
+                    border: none;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                .active-dot {
+                    background-color: rgba(193, 153, 118, 1);
                 }
             }
-        }
-        .dots-navigation {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            gap: 8px;
-            .dot {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                background-color: rgba(193, 153, 118, 0.3);
-                border: none;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-            .active-dot {
-                background-color: rgba(193, 153, 118, 1);
-            }
-        }
-        
         }
 
         .link {
@@ -646,8 +645,6 @@ header {
                 padding: 1% 5%;
             }
         }
-
-        
     }
 }
 
@@ -984,6 +981,7 @@ header {
                         width: 200px;
                         height: 200px;
                         object-fit: cover;
+                        margin-right: 20px;
                     }
                     .description {
                         display: flex;
@@ -1153,6 +1151,7 @@ header {
                         width: 200px;
                         height: 200px;
                         object-fit: cover;
+                        margin-right: 20px;
                     }
                     .description {
                         display: flex;
@@ -1248,7 +1247,7 @@ header {
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
     }
-    p {
+    h2 {
         font-family: Balestya Bold;
         font-size: 60px;
         font-weight: 400;
@@ -1259,7 +1258,7 @@ header {
         text-decoration-skip-ink: none;
         color: rgba(193, 153, 118, 1);
     }
-    h3 {
+    p {
         font-family: Gilroy-SemiBold;
         font-size: 22px;
         line-height: 25.78px;
@@ -1420,6 +1419,7 @@ header {
                 width: 750px;
                 resize: none;
                 height: 50px;
+                overflow-y: hidden;
             }
             button {
                 margin-top: 3%;
@@ -1598,6 +1598,7 @@ footer {
                     }
                 }
                 .menu {
+                    width: 50%;
                     .left-side {
                         button {
                             img {
@@ -1654,7 +1655,7 @@ footer {
             line-height: 40px;
         }
         h1 {
-            font-size: 60px;
+            font-size: 50px;
             line-height: 80px;
         }
         p {
@@ -1679,7 +1680,7 @@ footer {
 
                     img {
                         width: 100%;
-                        height: 400px;
+                        height: 300px;
                         object-fit: cover;
                     }
 
@@ -1701,7 +1702,7 @@ footer {
                 line-height: 30px;
             }
             h1 {
-                font-size: 22px;
+                font-size: 20px;
                 line-height: 30px;
             }
         }
@@ -1734,10 +1735,12 @@ footer {
                     line-height: 32px;
                 }
             }
-            .slider-container {
-                .cards-container {
-                    .card {
-                        width: 47%;
+            .news-slider {
+                .slider-container {
+                    .cards-container {
+                        .card {
+                            width: 47%;
+                        }
                     }
                 }
             }
@@ -1775,11 +1778,10 @@ footer {
             padding: 100px 50px;
             .logo {
                 font-size: 110px;
-                
             }
             .info {
                 align-items: end;
-                img{
+                img {
                     width: 350px;
                 }
                 .text {
@@ -1793,41 +1795,124 @@ footer {
                         line-height: 40px;
                         margin-bottom: 20px;
                     }
-                    p{
+                    p {
                         font-size: 16px;
                         line-height: 20px;
                     }
                 }
             }
         }
-        .slider{
-            .glide{
-                .glide__track{
-                    .glide__slides{
-                        .glide__slide{
-                            .nav{
-                                img{
+        .slider {
+            .glide {
+                .glide__track {
+                    .glide__slides {
+                        .glide__slide {
+                            .nav {
+                                img {
                                     width: 50px;
-                                    height:50px;
+                                    height: 50px;
                                 }
                             }
-                            p{
+                            p {
                                 font-size: 16px;
                                 margin-top: 20px;
                                 margin-bottom: 10px;
                                 line-height: 30px;
                             }
-                            h3{
+                            h3 {
                                 font-size: 22px;
                             }
                         }
                     }
                 }
-                .glide__arrows{
-                    .glide__arrow{
-                        img{
+                .glide__arrows {
+                    .glide__arrow {
+                        img {
                             width: 50px;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-food,
+    .banner-drink {
+        h1 {
+            font-size: 60px;
+            line-height: 40px;
+        }
+        p {
+            font-size: 36px;
+            line-height: 80px;
+        }
+    }
+
+    .mainMenu,
+    .mainDrink {
+        .menu {
+            padding: 3% 50px;
+            .cards {
+                .category-buttons {
+                    button {
+                        font-size: 18px;
+                        padding: 10px 15px;
+                    }
+                }
+                .name-category {
+                    h1 {
+                        font-size: 28px;
+                    }
+                }
+                .cards-container {
+                    .card {
+                        img {
+                            width: 150px;
+                            height: 150px;
+                        }
+                        .description {
+                            .text {
+                                h1 {
+                                    font-size: 18px;
+                                    margin-bottom: 10px;
+                                }
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
+                            .price {
+                                p {
+                                    font-size: 18px;
+                                }
+                                #weight {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainNews {
+        .cards-container {
+            padding: 3% 50px;
+            .card {
+                width: 80%;
+                height: 450px;
+                img {
+                    height: 250px;
+                }
+                .description {
+                    h1 {
+                        font-size: 18px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                    .text {
+                        font-size: 16px;
                     }
                 }
             }
@@ -1865,6 +1950,14 @@ footer {
                 button {
                     font-size: 12px;
                 }
+            }
+        }
+    }
+
+    footer {
+        .logo {
+            img {
+                width: 180px;
             }
         }
     }
