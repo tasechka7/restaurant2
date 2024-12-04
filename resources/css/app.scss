@@ -1738,9 +1738,26 @@ footer {
             .news-slider {
                 .slider-container {
                     .cards-container {
+                        width: 100%;
                         .card {
                             width: 47%;
+                            img{
+                                height: 200px;
+                            }
+                            .description{
+                                h1{
+                                    font-size: 16px;
+                                    
+                                }
+                                p{
+                                    font-size: 12px;
+                                }
+                            }
                         }
+                    }
+
+                    button{
+                        display: none;
                     }
                 }
             }
@@ -1970,5 +1987,23 @@ footer {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media(max-width: 720px){
+    header{
+        .container{
+            .burger-menu{
+                .menu{
+                    
+                }
+            }
+        }
+    }
+    .banner,
+    .bannerAbout,
+    .banner-news,
+    .banner-reservation{
+        height: 50vh;
     }
 }
