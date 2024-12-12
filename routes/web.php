@@ -11,12 +11,29 @@ use App\Http\Controllers\MenusCategoriesController;
 use App\Http\Controllers\DrinksCategoriesController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
-Route::view('/', 'index')->name('home');
-Route::view('/about', 'about')->name('about');
-Route::view('/menu', 'menu')->name('menu');
-Route::view('/drink', 'drink')->name('drink');
-Route::view('/ourNews', 'ourNews')->name('ourNews');
-Route::view('/reservation', 'reservation')->name('reservation');
+Route::get('/', function () {
+    return view('index');
+})->name('home');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/menu', function () {
+    return view('menu');
+})->name('menu');
+
+Route::get('/drink', function () {
+    return view('drink');
+})->name('drink');
+
+Route::get('/ourNews', function () {
+    return view('ourNews');
+})->name('ourNews');
+
+Route::get('/reservation', function () {
+    return view('reservation');
+})->name('reservation');
 
 
 

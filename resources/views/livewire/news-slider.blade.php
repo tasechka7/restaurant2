@@ -1,6 +1,6 @@
- <div x-data="{
+<div x-data="{
     currentSlide: 0,
-    slidesPerPage: window.innerWidth <= 1100 ? 2 : 3,
+    slidesPerPage: window.innerWidth <= 700 ? 1 : (window.innerWidth <= 1100 ? 2 : 3),
     totalSlides: {{ count($news) }},
     slides: @js($news),
     startX: 0,
@@ -23,8 +23,9 @@
         return displayedSlides;
     },
     init() {
+        this.slidesPerPage = window.innerWidth <= 700 ? 1 : (window.innerWidth <= 1100 ? 2 : 3);
         window.addEventListener('resize', () => {
-            this.slidesPerPage = window.innerWidth <= 1100 ? 2 : 3;
+            this.slidesPerPage = window.innerWidth <= 700 ? 1 : (window.innerWidth <= 1100 ? 2 : 3);
         });
     },
     handleTouchStart(event) {

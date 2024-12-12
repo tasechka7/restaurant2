@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use App\Models\Reservations;
 use Illuminate\Http\Request;
@@ -23,14 +25,20 @@ return view("reservations.create", compact("reservation"));
 
 public function store(ReservationRequest $request)
 {
+    // Валидация данных через ReservationRequest
     $validatedData = $request->validated();
 
+    // Сохранение данных в базу
     $reservation = new Reservations();
     $reservation->fill($validatedData);
     $reservation->save();
 
+    // Отправка email
+    Mail::to('julianeckal@gmail.com')->send(new \App\Mail\ReservationCreated($reservation));
+
+    // Редирект с сообщением об успехе
     return redirect('/')
-        ->with('success', 'Reservation created successfully!'); // Передаем сообщение во flash-сессию
+        ->with('success', 'Reservation created successfully! An email notification has been sent.'); // Flash-сообщение
 }
 
 

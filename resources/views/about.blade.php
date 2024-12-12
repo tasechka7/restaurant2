@@ -42,7 +42,7 @@
                     <p>Thankyou for understanding. We very much look forward
                         to welcoming you for a deep dive into decadence</p>
                 </div>
-                <img src="/images/drinksAbout.png" alt="">
+                <img src="/images/drinksAbout.jpg" alt="">
             </div>
         </div>
         <div class="slider">

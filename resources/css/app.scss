@@ -130,7 +130,6 @@ header {
                     width: 70%;
                     .logo {
                         display: flex;
-
                         justify-content: end;
                         img {
                             width: 50px;
@@ -468,7 +467,7 @@ header {
             align-items: center;
             justify-content: space-between;
             padding: 3% 0;
-            width: 100%;
+            max-width: 100%;
             .image {
                 width: 22%;
                 height: 330px;
@@ -735,8 +734,13 @@ header {
         .info {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            img{
+                width: 45%;
+            }
             .text {
-                margin-top: 200px;
+                margin-top: 250px;
+                width: 45%;
                 h3 {
                     font-family: Balestya Bold;
                     font-size: 40px;
@@ -1504,7 +1508,7 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-    background-image: url(../../public/images/bg\ footer.svg);
+    background-image: url(../../public/images/bgfooter.svg);
     top: 100vh;
     min-width: 100vw;
     right: 0;
@@ -1586,7 +1590,7 @@ footer {
 @media (max-width: 1100px) {
     header {
         .container {
-            width: 800px;
+            width: 650px;
             .burger-menu {
                 .burger {
                     gap: 10px;
@@ -1646,6 +1650,7 @@ footer {
             }
         }
     }
+
     .banner,
     .bannerAbout,
     .banner-news,
@@ -1741,22 +1746,21 @@ footer {
                         width: 100%;
                         .card {
                             width: 47%;
-                            img{
+                            img {
                                 height: 200px;
                             }
-                            .description{
-                                h1{
+                            .description {
+                                h1 {
                                     font-size: 16px;
-                                    
                                 }
-                                p{
+                                p {
                                     font-size: 12px;
                                 }
                             }
                         }
                     }
 
-                    button{
+                    button {
                         display: none;
                     }
                 }
@@ -1990,12 +1994,55 @@ footer {
     }
 }
 
-@media(max-width: 720px){
-    header{
-        .container{
-            .burger-menu{
-                .menu{
-                    
+@media (max-width: 720px) {
+    header {
+        .container {
+            width: 350px;
+            .burger-menu {
+                .burger {
+                    img {
+                        width: 20px;
+                    }
+                    p {
+                    }
+                }
+                .menu {
+                    width: 60%;
+                    height: 50vh;
+                    border-radius: 0 0 10px 0;
+                    .left-side {
+                        .media a:first-child {
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                        }
+                    }
+                    .right-side {
+                        .logo {
+                            width: 100%;
+                            img {
+                                width: 30px;
+                            }
+                        }
+                        nav {
+                            margin-top: 35%;
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .logo {
+                width: 70px;
+                display: none;
+            }
+            .links {
+                padding: 0;
+                border: none;
+
+                a {
+                    font-size: 18px;
+                    line-height: 10px;
                 }
             }
         }
@@ -2003,7 +2050,319 @@ footer {
     .banner,
     .bannerAbout,
     .banner-news,
-    .banner-reservation{
+    .banner-reservation {
         height: 50vh;
+        h2 {
+            font-size: 28px;
+        }
+        h1 {
+            font-size: 26px;
+        }
+        p {
+            font-size: 10px;
+        }
+    }
+
+    .banner-food,
+    .banner-drink {
+        height: 50vh;
+        h1 {
+            font-size: 60px;
+            line-height: 40px;
+        }
+        p {
+            font-size: 36px;
+            line-height: 80px;
+        }
+    }
+    .mainMenu,
+    .mainDrink{
+        top: 45vh;
+        .menu{
+            padding: 3% 30px;
+            .cards{
+                .category-buttons{
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    button{
+                        padding: 7px 10px;
+                        font-size: 16px;
+                    }
+                }
+                .name-category{
+                    h1{
+                        font-size: 24px;
+                        
+                    }
+                }
+                .cards-container{
+                    .card{
+                        gap: 10px;
+                        img{
+                            max-width: 100px;
+                            max-height: 100px;
+                            margin-right: 0;
+                        }
+                        .description{
+                            flex-direction: column;
+                            .text{
+                                width: 100%;
+                                h1{
+                                    font-size: 16px;
+                                }
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                            .price{
+                                width: 100%;
+                                p{
+                                    font-size: 16px;
+                                }
+                                #weight{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home {
+        top: 45vh;
+        .navigation {
+            .title {
+                p {
+                    font-size: 20px;
+                }
+                h1 {
+                    font-size: 28px;
+                }
+            }
+            .cards {
+                flex-direction: column;
+                a {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+        .about{
+            padding: 2% 5%;
+        }
+        .about .card:nth-child(2) {
+            width: 100%;
+            height: auto;
+            padding: 20px ;
+            h2{
+                font-size: 22px;
+            }
+            h1{
+                font-size: 18px;
+                margin: 10px 0;
+            }
+            a{
+                margin-top:20px;
+            }
+        }
+        .about .card:nth-child(1),
+        .about .card:nth-child(3) {
+            display: none;
+        }
+        .menu{
+            .title {
+                p {
+                    font-size: 20px;
+                }
+                h1 {
+                    font-size: 28px;
+                }
+            }
+            .images .image:nth-child(2),
+            .images .image:nth-child(3){
+                width: 50%;
+            }
+            .images .image:nth-child(1),
+            .images .image:nth-child(4){
+                display: none;
+            }
+        }
+        .news{
+            .title {
+                p {
+                    font-size: 20px;
+                }
+                h1 {
+                    font-size: 28px;
+                }
+            }
+
+            .news-slider{
+                .slider-container{
+                    .cards-container{
+                        .card{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .link{
+                margin-top: 30px;
+                a{
+                    padding: 7px 25px;
+                }
+            }
+        }
+    }
+
+    .aboutMain{
+        top: 45vh;
+        .description{
+            flex-direction: column-reverse;
+            gap: 40px;
+            .text{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                h3{
+                    font-size: 20px;
+                }
+                h1{
+                    font-size: 18px;
+                }
+                p{
+                    margin-bottom: 10px;
+                    letter-spacing: 2px;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                h4{
+                    font-size: 24px
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+        .descriptionTwo{
+            .logo{
+                display: none;
+            }
+            .info{
+                flex-direction: column;
+                .text{
+                    margin-top:0;
+                    h3{
+                        font-size: 20px;
+                        text-align: center;
+                       line-height: 20px;
+                    }
+                    h1{
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 27px;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        letter-spacing: 2px;
+                    }
+                }
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        .slider{
+            .glide{
+                .glide__track{
+                    width: 100%;
+                }
+                .glide__arrows{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .mainNews{
+        top: 45vh;
+        .cards-container{
+            .card{
+                width: 100%;
+                height: auto;
+                
+                img{
+                    height: 40%;
+                    width: 100%;
+                }
+                .description{
+                    padding: 10px 20px;
+                    h1{
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 12px;
+                        margin: 7px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .reservation{
+        .form-reservation{
+            width: 300px;
+            padding: 50px 20px;
+            h1{
+                font-size: 18px;
+            }
+            form{
+                .text-form{
+                    flex-direction: column;
+
+                    .top-form,
+                    .bottom-form{
+                        div{
+                            width: 250px;
+                        }
+                    }
+                }
+                textarea{
+                    width: 250px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    footer {
+        top: 50vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        .contacts{
+            h1{
+                margin-bottom: 10px;
+            }
+            a{
+                margin-top: 10px;
+            }
+        }
+        .workHourse{
+            h1{
+                text-align: left;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
