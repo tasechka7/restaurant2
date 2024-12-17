@@ -12,4 +12,12 @@ export default defineConfig({
     optimizeDeps: {
         include: ['swiper'], // Убедитесь, что Swiper оптимизирован для работы с Vite
     },
+    build: {
+        outDir: 'public/dist', // Путь для собранных файлов
+        assetsDir: 'assets', // Подкаталог для ассетов
+        manifest: true, // Включает создание манифеста
+        rollupOptions: {
+          input: '/resources/js/app.js' // Основной файл для сборки
+        }
+    }
 });
