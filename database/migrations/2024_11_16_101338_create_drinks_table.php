@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id(); // ID блюда
             $table->string('name')->unique(); // Название блюда
             $table->string('slug')->unique(); // Слаг
-            $table->text('ingredients'); // Ингредиенты (список или описание)
+            $table->text('ingredients')->nullable(); // Ингредиенты (список или описание)
             $table->integer('price'); // Цена блюда
             $table->string('photo'); // Путь к изображению
             $table->foreignId('category_id')->constrained('drinks_categories');

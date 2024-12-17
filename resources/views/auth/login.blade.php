@@ -3,10 +3,10 @@
 @section('title', "Login")
 
 @section("main")
-<form method="POST" action="{{ route('login') }}" class="w-full h-screen flex flex-col items-center justify-center bg-slate-900">
+<form method="POST" action="{{ route('login') }}" class="w-full h-screen flex flex-col items-center justify-center ">
     @csrf
     <div class="flex flex-col items-center mb-6">
-        <input class="border-2  border-pink-500 rounded-2xl outline-none py-2 px-3 text-3xl bg-slate-900 text-white" id="email" type="email" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus  />
+        <input class="border-2  border-pink-500 rounded-2xl outline-none py-2 px-3 text-3xl bg-slate-900 text-white" id="email" type="email" placeholder="Email" name="email" value="{{ old('email') }}" required   />
     </div>
     <div class="flex flex-col items-center">
         <input class="border-2  border-pink-500 rounded-2xl outline-none py-2 px-3 text-3xl bg-slate-900 text-white " id="password" placeholder="Password"  type="password" name="password" required />

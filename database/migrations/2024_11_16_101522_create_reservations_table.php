@@ -15,12 +15,13 @@ return new class extends Migration
             $table->id(); // ID бронирования
             $table->string('name');  // Имя клиента
             $table->string('phone');  // Телефон клиента (тип string вместо integer)
-            $table->string('email');  // Электронная почта клиента
-            $table->text('message');  // Сообщение от клиента
-            $table->enum('reservation_type', ['Бизнес ланч', 'Ужин', 'Событие', 'Частное мероприятие'])
-                  ->default('Бизнес ланч'); // Тип бронирования с дефолтным значением
+            $table->text('message')->nullable();  // Сообщение от клиента
+            $table->enum('reservation_type', ['Business Lunch', 'Dinner', 'Event', 'Private Event'])
+                  ->default('Business Lunch'); 
+                  $table->integer('number_of_people')->default(1);// Тип бронирования с дефолтным значением
             $table->date('date');  // Дата бронирования
             $table->string('time');
+            $table->enum('status', ['in_processing', 'confirmed'])->default('in_processing');
               // Время бронирования (храним как строку)
             $table->timestamps();
         });

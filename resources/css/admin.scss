@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Gilroy;
+    background-color: rgb(15 23 42);
 }
 
 @import url("../../public/fonts/Gilroy/stylesheet.css");
+
 
 a {
     color: white;
@@ -113,6 +115,7 @@ main {
             display: flex;
             gap: 2%;
             margin-top: 2%;
+            flex-wrap: wrap;
             .btn-secondary {
                 color: white;
                 background: none;
@@ -121,6 +124,7 @@ main {
                 font-size: 26px;
                 border-radius: 5px;
                 font-weight: lighter;
+                margin-bottom: 2%;
             }
 
             .btn-primary {
@@ -131,6 +135,7 @@ main {
                 font-size: 26px;
                 border-radius: 5px;
                 font-weight: bold;
+                margin-bottom: 2%;
             }
         }
 
@@ -216,12 +221,15 @@ main {
         width: 100%;
         justify-content: center;
         gap: 3%;
+        flex-wrap: wrap;
+        
         .category {
             width: 21%;
             box-shadow: 0 0 10px rgb(236 72 153);
             padding: 2% 3%;
             border-radius: 20px;
             flex-wrap: wrap;
+            margin-bottom: 2%;
             h2{
                 font-size: 28px;
                 font-weight: 700;
